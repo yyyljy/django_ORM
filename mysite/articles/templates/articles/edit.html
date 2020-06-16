@@ -1,0 +1,8 @@
+<h1>글 내용 수정 페이지</h1>
+<h2>글 번호 : {{article.pk}}</h2>
+<hr>
+<form action="{% url 'articles:update' article.pk %}" method="GET">
+    <h2>글 제목 : </h2><input type="text" value="{{ article.title }}" name="title">
+    <h2>글 내용 : </h2><input type="text" value="{{ article.content }}" name="content">
+    <input type="submit" value="수정하기">
+</form>

@@ -1,0 +1,7 @@
+<h1> 제목 : {{article.title}}</h1>
+<h4>게시글 번호 : {{pk}}</h4>
+<h2> 내용 : {{article.content}}</h2>
+<h3>작성 시간 : {{article.created_at}}</h3>
+<a href="/articles/{{article.pk}}/delete">삭제</a>
+<a href="{% url 'articles:delete' article.pk %}">삭제</a>
+<a href="{% url 'articles:index' %}">홈</a>
